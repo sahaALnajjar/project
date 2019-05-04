@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    stop 15 : is here
+    follow the same process as before with little changes on it
+     android:top="1dp"
+     the top dp will be 1 instead of -1
+
+     this one will be used with the  bottom AppBarLayout
+
+step 16 : go to activity_main.xml
+and apply the top and bottom borders to the Toolbar using
+android:background
+
+
+
+ -->
+
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="1dp">
+    <item
+        android:bottom="-1dp"
+        android:right="-1dp"
+        android:left="-1dp"
+        android:top="1dp">
+        <shape
+            android:shape="rectangle">
+            <stroke android:width="0.5dp"
+                android:color="@color/ToolBarColor"/>
+            <solid
+                android:color="@color/WhiteColor"
+                />
+        </shape>
+    </item>
+</layer-list>

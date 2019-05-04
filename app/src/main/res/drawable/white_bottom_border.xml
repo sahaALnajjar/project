@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <!--
+
+     this one will be used with the top AppBarLayout
+
+   step 8 : we will now create the border there are many ways to do that
+   but this is the easiest way for me .
+
+   the whole idea here is to create a rectangle with 1dp height
+   and 0 dp for the rest
+
+
+   step 9 : change selector into a layer-list
+
+    step 10 : create item  and inside it create shape
+         and that would be rectangle . as mentioned above .
+
+ step 11 : inside the shape create the stroke
+
+  step 12 : create solid under stroke then close shape and close item  .
+
+  step 13 :  make colors for the for the shape and solid use this
+  website
+              https://www.color-hex.com/
+
+step 14 : go to app > res > values > colors and apply the new colors
+  to be used later on
+
+   step 15 :  create the drawable file 2 , in order to create the
+   border in  the bottom  this one will be used with the bottom AppBarLayout
+
+
+
+    go to > app > res > drawable > create new resource file
+
+    name is white_top_border
+
+-->
+
+    <layer-list
+        xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="match_parent"
+          android:layout_height="1dp" >
+    <!--
+            android:layout_height="1dp"
+    this code will determines the height of the border or the thickens
+
+
+
+        <item
+            android:bottom="1dp"
+            android:right="-2dp"
+            android:left="-2dp"
+            android:top="-1dp">
+
+            <shape
+                android:shape="rectangle">
+                <stroke android:width="0.5dp"
+                    android:color="@color/ToolBarColor"/>
+                <solid
+                    android:color="@color/WhiteColor"
+                    />
+            </shape>
+        </item>
+
+
+
+    -->
+
+        <item
+            android:bottom="1dp"
+            android:right="-2dp"
+            android:left="-2dp"
+            android:top="-1dp">
+
+            <shape
+                android:shape="rectangle">
+                <stroke android:width="0.5dp"
+                    android:color="@color/divider"/>
+                <solid
+                    android:color="@color/WhiteColor"
+                    />
+            </shape>
+        </item>
+</layer-list>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:padding="8dp"
+    tools:context="com.example.android.myproject.quiz.SimpleQuizActivity">
+
+    <Button
+        android:id="@+id/choice3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/choice2"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="20dp"
+        android:background="#43b3f7"
+        android:text="@string/button_three"
+        android:textAllCaps="false"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/choice2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/choice1"
+        android:layout_marginTop="20dp"
+        android:background="#43b3f7"
+        android:text="@string/button_two"
+        android:textAllCaps="false"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/choice1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/question"
+        android:layout_marginTop="80dp"
+        android:background="#43b3f7"
+        android:text="@string/button_one"
+        android:textAllCaps="false"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/score"
+        android:textColor="@color/secondary_text"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:text="@string/_0"
+        android:textColor="#FF0000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="62dp"
+        android:paddingLeft="8dp"
+        android:paddingStart="8dp"
+        android:text="@string/simple_quiz"
+        android:textColor="@color/primary_text"
+        android:textSize="20sp"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/end_quizSimple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/choice3"
+        android:layout_margin="12dp"
+        android:padding="12dp"
+        android:text="@string/end_quiz"
+        android:textColor="@color/primary_text"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/fragmentOneCategoryList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:divider="@null"
+        android:dividerHeight="6dp"
+        android:padding="8dp"
+        android:scrollbars="vertical">
+
+    </ListView>
+
+</RelativeLayout>
+
+    <!--
+      this page following the desing of features_list_layout
+      and it is liked to the FragmentThree
+      and the Fragment is added to the mainActivity using viewPager
+
+
+           android:scrollbars="vertical"
+
+this code will allow the list to scroll when it get bigger
+     -->

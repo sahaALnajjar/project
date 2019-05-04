@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--IMPORTANT otherwise backgrnd img. will not fill the whole screen -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eeeeee"
+    android:fillViewport="true"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    tools:context="com.example.android.myproject.Grammar.grammarHolder">
+    <!--IMPORTANT otherwise backgrnd img. will not fill the whole screen -->
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp">
+
+        <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/the_story_nameHere5"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="4dp"
+            android:layout_marginTop="16dp"
+            android:paddingBottom="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/the_nameHere"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:paddingTop="18dp"
+                    android:text="@string/the_grammartitle"
+                    android:textColor="@color/primary_text"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/the_story_nameHere5">
+
+            <TextView
+                android:id="@+id/the_TextHere"
+                android:layout_width="match_parent"
+                android:layout_height="328dp"
+                android:layout_marginTop="38dp"
+                android:padding="4dp"
+                android:text="@string/the_grammar_goes_here"
+                android:textColor="@color/secondary_text"
+                android:textSize="20sp" />
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+</ScrollView>

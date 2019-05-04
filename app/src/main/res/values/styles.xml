@@ -1,0 +1,60 @@
+<resources>
+
+    <!-- Base application theme.
+
+    step 7 is here !!  we should change the AppTheme
+
+    from
+        <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+     To
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+       and now the action bar has been removed leaving us with only two AppBarLayout
+       which we created
+
+    -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="AppTheme_myActionBar_I_made_this"
+        parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="AppThemeNewThemeToBeTested"
+        parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="cardViewStyle">@style/CardView</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+    </style>
+
+
+
+    <style name="Widget.CardContent" parent="android:Widget">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">24dp</item>
+        <item name="android:paddingBottom">24dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+
+
+</resources>

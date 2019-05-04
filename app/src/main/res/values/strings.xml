@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">EasyEnglish</string>
+
+    <!-- : Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_my_view_pager_adapter">myViewPagerAdapter</string>
+    <string name="the_grammar_goes_here">the grammar goes here</string>
+    <string name="email_address">Email address</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="subject">Subject</string>
+    <string name="subject_hint">subject</string>
+    <string name="message">Message</string>
+    <string name="what_s_in_your_mind">what\'s in your mind</string>
+    <string name="send_email">Send email</string>
+    <string name="score">Score</string>
+    <string name="_0">0</string>
+    <string name="beginner">beginner</string>
+    <string name="end_quiz">End quiz</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="button_three">Button three</string>
+    <string name="button_two">Button two</string>
+    <string name="button_one">Button one</string>
+    <string name="simple_quiz">simple quiz</string>
+    <string name="the_grammartitle">the grammarTitle</string>
+    <string name="the_word_goes_here">the word goes here</string>
+    <string name="arabic">Arabic</string>
+    <string name="meaningArabic">المعنى بالعربي</string>
+    <string name="english">English</string>
+    <string name="meaningEnglish">المعنى بالانجليزي</string>
+    <string name="example">Example</string>
+    <string name="ExampleEnglish">المثال بالانجليزي</string>
+    <string name="todo">TODO</string>
+
+</resources>

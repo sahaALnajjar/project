@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!--
+    step 25 create : the items to be added to the bottom navigation view
+
+step 26 : go to drawable create the image asset
+
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home_black"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/favorite"
+        android:icon="@drawable/ic_favorite_black"
+        android:title="Favorite"/>
+
+    <item
+
+        android:id="@+id/email"
+        android:icon="@drawable/ic_email_black"
+        android:title="Email" >
+
+
+    </item>
+
+</menu>
