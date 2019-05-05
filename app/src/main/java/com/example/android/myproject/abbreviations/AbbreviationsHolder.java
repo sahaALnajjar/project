@@ -1,9 +1,10 @@
-package com.example.android.myproject.Exclamation;
+package com.example.android.myproject.abbreviations;
 
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -12,9 +13,8 @@ import android.widget.Toast;
 
 import com.example.android.myproject.Models.SharedPrefs;
 import com.example.android.myproject.R;
-import com.example.android.myproject.expressingMistakes.MistakesHolder;
 
-public class ExclamationHolder extends AppCompatActivity {
+public class AbbreviationsHolder extends AppCompatActivity {
 
 
     private TextView the_word_textView;
@@ -73,10 +73,12 @@ public class ExclamationHolder extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.words_main_holder);
+        // setContentView(R.layout.activity_abbreviations_holder);
 
         // this code   setDisplayHomeAsUpEnabled(true); will show  the back arrow in the action bar
         // now you need to go to the manifest and new attribute android:parentActivityName=" the page we want to back to "
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         mAudioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
         the_word_textView = (TextView) findViewById(R.id.the_word_textview);
@@ -87,7 +89,6 @@ public class ExclamationHolder extends AppCompatActivity {
         // the images to be added later .
         bookmark = (ImageView) findViewById(R.id.imageView_bookmark_readIt);
         addToFavorite = (ImageView) findViewById(R.id.imageView_addTofavorite);
-
 
         playsoundEnglish = (ImageView) findViewById(R.id.imageView_play_soundEnglish);
         playsoundExample = (ImageView) findViewById(R.id.imageView_play_soundExample);
@@ -113,6 +114,10 @@ public class ExclamationHolder extends AppCompatActivity {
         playSound.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Log.i("Demo", "the word sound is working");
+
+
                 // Release the media player if it currently exists because we are about to
                 // play a different sound file
                 releaseMediaPlayer();
@@ -126,7 +131,7 @@ public class ExclamationHolder extends AppCompatActivity {
                     // We have audio focus now.
                     // Create and setup the {@link MediaPlayer} for the audio resource associated
                     // with the current word
-                    mediaPlayer = MediaPlayer.create(ExclamationHolder.this, audio);
+                    mediaPlayer = MediaPlayer.create(AbbreviationsHolder.this, audio);
                     // Start the audio file
                     mediaPlayer.start();
                     // Setup a listener on the media player, so that we can stop and release the
@@ -142,6 +147,9 @@ public class ExclamationHolder extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                Log.i("Example", "the word sound is working");
+
+
                 // Release the media player if it currently exists because we are about to
                 // play a different sound file
 
@@ -160,7 +168,7 @@ public class ExclamationHolder extends AppCompatActivity {
 
                     // Create and setup the {@link MediaPlayer} for the audio resource associated
                     // with the current word
-                    mediaPlayer = MediaPlayer.create(ExclamationHolder.this, exampleAudio);
+                    mediaPlayer = MediaPlayer.create(AbbreviationsHolder.this, exampleAudio);
 
                     // Start the audio file
                     mediaPlayer.start();
@@ -179,6 +187,10 @@ public class ExclamationHolder extends AppCompatActivity {
             public void onClick(View v) {
                 // Release the media player if it currently exists because we are about to
                 // play a different sound file
+
+                Log.i("english", "the word sound is working");
+
+
                 releaseMediaPlayer();
                 // Get the {@link Word} object at the given position the user clicked on
 
@@ -193,7 +205,7 @@ public class ExclamationHolder extends AppCompatActivity {
 
                     // Create and setup the {@link MediaPlayer} for the audio resource associated
                     // with the current word
-                    mediaPlayer = MediaPlayer.create(ExclamationHolder.this, englishAudio);
+                    mediaPlayer = MediaPlayer.create(AbbreviationsHolder.this, englishAudio);
 
                     // Start the audio file
                     mediaPlayer.start();
@@ -216,7 +228,7 @@ public class ExclamationHolder extends AppCompatActivity {
             private boolean bookmarking = true;
 
             public void onClick(View v) {
-                SharedPrefs prefs = new SharedPrefs(ExclamationHolder.this);
+                SharedPrefs prefs = new SharedPrefs(AbbreviationsHolder.this);
                 if (bookmarking) {
                     bookmark.setImageResource(R.drawable.ic_bookmarked_blue);
                     bookmarking = false;
@@ -236,7 +248,7 @@ public class ExclamationHolder extends AppCompatActivity {
         // this code is going to help me check and uncheck just like the function of the like button on facebook
         // anyway i need to find a way to save this change once i leave this page .
         //  find a way to get shared preference works here .
-        //try to add the text of the word to a string variable and sent it through a bundle to
+        // try to add the text of the word to a string variable and sent it through a bundle to
         //  the favorite activity then try to add it to the array list you have .
 
         addToFavorite.setOnClickListener(new View.OnClickListener() {

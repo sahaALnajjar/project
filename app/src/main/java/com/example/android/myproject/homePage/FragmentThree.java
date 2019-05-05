@@ -12,11 +12,11 @@ import android.widget.ListView;
 
 import com.example.android.myproject.email.EmailActivity;
 import com.example.android.myproject.favorite.FavoriteActivity;
-import com.example.android.myproject.Grammar.grammarActivity;
+import com.example.android.myproject.grammar.grammarActivity;
 import com.example.android.myproject.R;
-import com.example.android.myproject.Reading.readingActivity;
-import com.example.android.myproject.Spelling.SpellActivity;
-import com.example.android.myproject.Video.VideoActivity;
+import com.example.android.myproject.reading.readingActivity;
+import com.example.android.myproject.spelling.SpellActivity;
+import com.example.android.myproject.video.VideoActivity;
 import com.example.android.myproject.Models.featuresItemList;
 import com.example.android.myproject.Models.myListAdapter;
 import com.example.android.myproject.quiz.quizActivity;
@@ -51,10 +51,10 @@ public class FragmentThree extends Fragment {
         featuresitems.add(new featuresItemList(R.drawable.ic_email, "Email"));
         featuresitems.add(new featuresItemList(R.drawable.ic_favourite, "Favorite"));
         featuresitems.add(new featuresItemList(R.drawable.ic_video_player, "Tutorial Videos"));
-        featuresitems.add(new featuresItemList(R.drawable.ic_pen, "Spelling"));
+        featuresitems.add(new featuresItemList(R.drawable.ic_pen, "spelling"));
         featuresitems.add(new featuresItemList(R.drawable.ic_test2, "Quiz"));
-        featuresitems.add(new featuresItemList(R.drawable.ic_grammar, "Grammar"));
-        featuresitems.add(new featuresItemList(R.drawable.ic_reading, "Reading"));
+        featuresitems.add(new featuresItemList(R.drawable.ic_grammar, "grammar"));
+        featuresitems.add(new featuresItemList(R.drawable.ic_reading, "reading"));
 
 
         myListAdapter myAdapter = new myListAdapter(getContext(), featuresitems);

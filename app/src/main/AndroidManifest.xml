@@ -28,43 +28,43 @@
             android:name=".favorite.FavoriteActivity"
             android:label="Favorite" />
         <activity
-            android:name=".Video.VideoActivity"
+            android:name=".video.VideoActivity"
             android:label="Tutorial Videos" />
         <activity
-            android:name=".Spelling.SpellActivity"
+            android:name=".spelling.SpellActivity"
             android:label="Spelling " />
         <activity
             android:name=".quiz.quizActivity"
             android:label="Quiz" />
         <activity
-            android:name=".Grammar.grammarActivity"
+            android:name=".grammar.grammarActivity"
             android:label="Grammar" />
         <activity
-            android:name=".Reading.readingActivity"
+            android:name=".reading.readingActivity"
             android:label="Reading" />
         <activity
             android:name=".expressingMistakes.MistakesActivity"
             android:label="Expressing Mistakes" />
         <activity
-            android:name=".DescribingPeople.DescribingPeople"
+            android:name=".describingPeople.DescribingPeople"
             android:label="Describing People" />
         <activity
-            android:name=".PhrasesAnimals.animalCategoryFragmentOne"
+            android:name=".phrasesAnimals.animalCategoryFragmentOne"
             android:label="Phrases involving animals" />
         <activity
-            android:name=".Businness.Business"
+            android:name=".business.Business"
             android:label="Business" />
         <activity
-            android:name=".Exclamation.ExclamationCategoryFragmentOne"
+            android:name=".exclamation.ExclamationCategoryFragmentOne"
             android:label="Exclamation" />
         <activity
-            android:name=".Abbreviations.AbbreviationsCategoryFragmentOne"
+            android:name=".abbreviations.AbbreviationsCategoryFragmentOne"
             android:label="Abbreviations" />
         <activity
             android:name=".proverbs.proverbsActivity"
             android:label="Proverbs" />
         <activity
-            android:name=".AboutFood.AboutFoodCategoryFragmentOne"
+            android:name=".aboutFood.AboutFoodCategoryFragmentOne"
             android:label="Phrases About Food" />
         <activity
             android:name=".quiz.BeginnerQuizActivity"
@@ -76,31 +76,31 @@
             android:name=".expressingMistakes.MistakesHolder"
             android:label="Expressing Mistakes" />
         <activity
-            android:name=".DescribingPeople.PeopleHolder"
+            android:name=".describingPeople.PeopleHolder"
             android:label="Describing People" />
         <activity
-            android:name=".Reading.readingHolder"
+            android:name=".reading.readingHolder"
             android:label="Reading" />
         <activity
-            android:name=".Grammar.grammarHolder"
+            android:name=".grammar.grammarHolder"
             android:label="Grammar" />
         <activity
-            android:name=".PhrasesAnimals.animalHolder"
+            android:name=".phrasesAnimals.animalHolder"
             android:label="Phrases involving animals" />
         <activity
-            android:name=".Abbreviations.AbbreviationsHolder"
+            android:name=".abbreviations.AbbreviationsHolder"
             android:label="Abbreviations" />
         <activity
-            android:name=".AboutFood.FoodHolder"
+            android:name=".aboutFood.FoodHolder"
             android:label="Phrases About Food" />
         <activity
-            android:name=".Businness.BusinessHolder"
-            android:label="Businness" />
+            android:name=".business.BusinessHolder"
+            android:label="Business" />
         <activity
             android:name=".proverbs.proverbsHolder"
             android:label="Proverbs" />
         <activity
-            android:name=".Exclamation.ExclamationHolder"
+            android:name=".exclamation.ExclamationHolder"
             android:label="Exclamation" />
         <activity android:name=".MainActivity">
 

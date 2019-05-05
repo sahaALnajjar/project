@@ -1,4 +1,4 @@
-package com.example.android.myproject.DescribingPeople;
+package com.example.android.myproject.describingPeople;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +9,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ListView;
 
 import com.example.android.myproject.R;
@@ -156,7 +155,7 @@ public class DescribingPeople extends AppCompatActivity {
 //            @Override
 //            public void onTextChanged(CharSequence s, int start, int before, int count) {
 //                // reference the context of this page
-//                (DescribingPeople.this).arrayAdapter2.getFilter().filter(s);
+//                (describingPeople.this).arrayAdapter2.getFilter().filter(s);
 //            }
 //
 //            @Override

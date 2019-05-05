@@ -1,4 +1,4 @@
-package com.example.android.myproject.Businness;
+package com.example.android.myproject.abbreviations;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,28 +9,22 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ListView;
 
-import com.example.android.myproject.DescribingPeople.DescribingPeople;
 import com.example.android.myproject.Models.the_words_class;
 import com.example.android.myproject.R;
-import com.example.android.myproject.expressingMistakes.MistakesActivity;
-import com.example.android.myproject.expressingMistakes.MistakesHolder;
 import com.mancj.materialsearchbar.MaterialSearchBar;
-
 import java.util.ArrayList;
 
-public class Business extends AppCompatActivity {
-
+public class AbbreviationsCategoryFragmentOne extends AppCompatActivity {
 
     private ListView listView2;
     private ArrayList<the_words_class> arrayList;
     private ArrayAdapter<the_words_class> arrayAdapter;
 
     // use this edit text for the filter.
-    // private EditText MistakesFilter;
-    private MaterialSearchBar BusinessFilter;
+    // private EditText AbbreviationFilter;
+    private MaterialSearchBar AbbreviationFilter;
 
 
     @Override
@@ -44,43 +38,32 @@ public class Business extends AppCompatActivity {
 
 
         // to be used in the filter.
-        BusinessFilter = (MaterialSearchBar) findViewById(R.id.main_search);
+        AbbreviationFilter = (MaterialSearchBar) findViewById(R.id.main_search);
 
 
         listView2 = (ListView) findViewById(R.id.main_listView);
         arrayList = new ArrayList<>();
-
         // when adding the raw file for the audio make changes here
+        arrayList.add(new the_words_class("ATM",
+                "اختصار لكلمة الأن ، في هذه اللحظة ، وتعني ايضا جهاز الصراف الآلي",
+                "An acronym for : At The Moment or Automated Teller Machine ",
+                "person1: what are you up to? person2: just chillin' ATM",
+                R.raw.atm, R.raw.atmexample, R.raw.atmmeaning));
 
-        arrayList.add(new the_words_class("A dime a dozen",
-                "صفة للتعبير عن شيء متوفر بكثرة ورخيص جدا ( ليس نادر )",
-                "So plentiful as to be nearly worthless/ extremely cheap ",
-                "Great looks and awful personality ? People like him are a dime a dozen",
-                R.raw.adimeadozen, R.raw.adimeadozenexample, R.raw.adimeadozenmeaning));
-
-
-        arrayList.add(new the_words_class("Beg , borrow or steal",
-                "استخدام جميع الحيل اللازمة للحصول على شيء ما",
-                "To do whatever is necessary to get something",
-                "I don't care if you have to beg , borrow , or steal to get it, I want that car now! "
-                , R.raw.begborroworsteal, R.raw.begborroworstealexample, R.raw.begborroworstealmeaning));
+        arrayList.add(new the_words_class("ASAP", "في أسرع وقت ممكن",
+                "As soon as possible",
+                "Please reply ASAP because the deadline is approaching",
+                R.raw.asap, R.raw.asapexample, R.raw.asapmeaning));
 
 
-        arrayList.add(new the_words_class("Cold , hard cash",
-                "الأوراق النقدية ( ليس الشيك ولا بطاقة ائتمان )",
-                "Cash , not checks or credit",
-                "Sorry, we don't take cards. Just cold, hard cash"
-                , R.raw.coldhardcash, R.raw.coldhardcashexample, R.raw.coldhardcashmeaning));
-
-
-        arrayList.add(new the_words_class("Chip in",
-                "المساهمة في شيء ما بالمال أو الرأي ، دفع جزء من التكاليف ( جمعية مثلا )"
-                , "Contribute something ( money , advice,etc) pay for part of something along with others."
-                , "We're planning an office party and need everyone to chip in."
-                , R.raw.chipin, R.raw.chipinexample, R.raw.chipinmeaning));
+        arrayList.add(new the_words_class("BFF", "أعز صديق او صديقة",
+                "A person's best friend(Best Friends Forever)",
+                "of course they tell each other everything , they're BFFs",
+                R.raw.bff, R.raw.bffexample, R.raw.bffmeaning));
 
 
         arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, arrayList);
+
 
         listView2.setAdapter(arrayAdapter);
 
@@ -88,7 +71,7 @@ public class Business extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 the_words_class tem = arrayList.get(position);
-                //  also make sure to add it here .
+                // also make sure to add it here .
                 // add the data from the list to the String and send the String using bundle .
                 String theWord = tem.getThe_word_text();
                 String arabicWord = tem.getThe_word_in_arabic();
@@ -109,7 +92,7 @@ public class Business extends AppCompatActivity {
                 bundle.putInt("EnglishAudio", englishAudio);
 
                 // send the bundles using intnent , use put extras .
-                Intent intent = new Intent(Business.this, BusinessHolder.class);
+                Intent intent = new Intent(AbbreviationsCategoryFragmentOne.this, AbbreviationsHolder.class);
                 intent.putExtras(bundle);
                 startActivity(intent);
 
@@ -121,9 +104,9 @@ public class Business extends AppCompatActivity {
 
         // giving the Search some features "
 
-        BusinessFilter.setHint("Search");
-        BusinessFilter.setCardViewElevation(10);
-        BusinessFilter.addTextChangeListener(new TextWatcher() {
+        AbbreviationFilter.setHint("Search");
+        AbbreviationFilter.setCardViewElevation(10);
+        AbbreviationFilter.addTextChangeListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -133,7 +116,7 @@ public class Business extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
                 // reference the context of this page
-                (Business.this).arrayAdapter.getFilter().filter(s);
+                (AbbreviationsCategoryFragmentOne.this).arrayAdapter.getFilter().filter(s);
 
             }
 

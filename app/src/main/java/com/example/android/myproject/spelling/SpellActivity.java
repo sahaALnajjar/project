@@ -1,4 +1,4 @@
-package com.example.android.myproject.Spelling;
+package com.example.android.myproject.spelling;
 
 import android.content.DialogInterface;
 import android.content.Intent;

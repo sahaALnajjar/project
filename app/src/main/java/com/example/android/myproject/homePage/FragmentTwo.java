@@ -8,13 +8,10 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.android.myproject.Abbreviations.AbbreviationsCategoryFragmentOne;
 import com.example.android.myproject.Models.featuresItemList;
 import com.example.android.myproject.Models.myListAdapter;
-import com.example.android.myproject.Models.the_words_class;
 import com.example.android.myproject.R;
 import com.mancj.materialsearchbar.MaterialSearchBar;
 

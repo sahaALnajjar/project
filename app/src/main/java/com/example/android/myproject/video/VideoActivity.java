@@ -1,31 +1,20 @@
-package com.example.android.myproject.Video;
+package com.example.android.myproject.video;
 
-import android.content.Context;
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Layout;
-import android.util.DisplayMetrics;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.MediaController;
-import android.widget.TextView;
 import android.widget.VideoView;
 
-import com.example.android.myproject.MainActivity;
 import com.example.android.myproject.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class VideoActivity extends AppCompatActivity {
 

@@ -9,12 +9,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ListView;
 
-import com.example.android.myproject.Businness.Business;
-import com.example.android.myproject.Businness.BusinessHolder;
-import com.example.android.myproject.DescribingPeople.DescribingPeople;
 import com.example.android.myproject.Models.the_words_class;
 import com.example.android.myproject.R;
 import com.mancj.materialsearchbar.MaterialSearchBar;

@@ -10,12 +10,12 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.example.android.myproject.Abbreviations.AbbreviationsCategoryFragmentOne;
-import com.example.android.myproject.AboutFood.AboutFoodCategoryFragmentOne;
-import com.example.android.myproject.Businness.Business;
-import com.example.android.myproject.DescribingPeople.DescribingPeople;
-import com.example.android.myproject.Exclamation.ExclamationCategoryFragmentOne;
-import com.example.android.myproject.PhrasesAnimals.animalCategoryFragmentOne;
+import com.example.android.myproject.abbreviations.AbbreviationsCategoryFragmentOne;
+import com.example.android.myproject.aboutFood.AboutFoodCategoryFragmentOne;
+import com.example.android.myproject.business.Business;
+import com.example.android.myproject.describingPeople.DescribingPeople;
+import com.example.android.myproject.exclamation.ExclamationCategoryFragmentOne;
+import com.example.android.myproject.phrasesAnimals.animalCategoryFragmentOne;
 import com.example.android.myproject.R;
 import com.example.android.myproject.expressingMistakes.MistakesActivity;
 import com.example.android.myproject.Models.featuresItemList;
@@ -48,7 +48,7 @@ public class FragmentOne extends Fragment {
         fragmentOne.add(new featuresItemList(R.drawable.ic_people2, "Describing people"));
         fragmentOne.add(new featuresItemList(R.drawable.ic_animal, "Phrases involving animals "));
         fragmentOne.add(new featuresItemList(R.drawable.ic_business, "Business"));
-        fragmentOne.add(new featuresItemList(R.drawable.ic_exclamation, "Exclamation"));
+        fragmentOne.add(new featuresItemList(R.drawable.ic_exclamation, "exclamation"));
         fragmentOne.add(new featuresItemList(R.drawable.ic_abbreviation, "Abbreviations"));
         fragmentOne.add(new featuresItemList(R.drawable.ic_proverb, "Proverbs"));
         fragmentOne.add(new featuresItemList(R.drawable.ic_food, "phrases about  food"));

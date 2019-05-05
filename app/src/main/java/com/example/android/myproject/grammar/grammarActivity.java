@@ -1,4 +1,4 @@
-package com.example.android.myproject.Grammar;
+package com.example.android.myproject.grammar;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -11,7 +11,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.android.myproject.Abbreviations.AbbreviationsCategoryFragmentOne;
 import com.example.android.myproject.R;
 import com.mancj.materialsearchbar.MaterialSearchBar;
 

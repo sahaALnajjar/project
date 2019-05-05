@@ -1,4 +1,4 @@
-package com.example.android.myproject.PhrasesAnimals;
+package com.example.android.myproject.phrasesAnimals;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,10 +9,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ListView;
 
-import com.example.android.myproject.DescribingPeople.DescribingPeople;
 import com.example.android.myproject.R;
 import com.example.android.myproject.Models.the_words_class;
 import com.mancj.materialsearchbar.MaterialSearchBar;

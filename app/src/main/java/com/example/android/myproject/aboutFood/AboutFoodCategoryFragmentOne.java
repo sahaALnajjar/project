@@ -1,4 +1,4 @@
-package com.example.android.myproject.Exclamation;
+package com.example.android.myproject.aboutFood;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,27 +9,24 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ListView;
 
-import com.example.android.myproject.DescribingPeople.DescribingPeople;
 import com.example.android.myproject.Models.the_words_class;
 import com.example.android.myproject.R;
-import com.example.android.myproject.expressingMistakes.MistakesActivity;
-import com.example.android.myproject.expressingMistakes.MistakesHolder;
 import com.mancj.materialsearchbar.MaterialSearchBar;
 
 import java.util.ArrayList;
 
-public class ExclamationCategoryFragmentOne extends AppCompatActivity {
+public class AboutFoodCategoryFragmentOne extends AppCompatActivity {
+
 
     private ListView listView2;
     private ArrayList<the_words_class> arrayList;
     private ArrayAdapter<the_words_class> arrayAdapter;
 
     // use this edit text for the filter.
-    //   private EditText ExclamationFilter;
-    private MaterialSearchBar ExclamationFilter;
+    //  private EditText MistakesFilter;
+    private MaterialSearchBar foodfilter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,37 +39,33 @@ public class ExclamationCategoryFragmentOne extends AppCompatActivity {
 
 
         // to be used in the filter.
-        ExclamationFilter = (MaterialSearchBar) findViewById(R.id.main_search);
+        foodfilter = (MaterialSearchBar) findViewById(R.id.main_search);
 
 
         listView2 = (ListView) findViewById(R.id.main_listView);
+        //listView2.setTextFilterEnabled(false);
+
         arrayList = new ArrayList<>();
         //  when adding the raw file for the audio make changes here
 
-        arrayList.add(new the_words_class("Back at ya!",
-                "وانت كذلك ، ولك أيضاً", "same to you!",
-                "Person 1: Have a great day! Be safe. \n Person 2: Back at ya!"
-                , R.raw.backatya, R.raw.backatyaexample, R.raw.backatyameaning));
+        arrayList.add(new the_words_class("Cup of joe",
+                "كوب قهوة", "Cup of coffee"
+                , "Good morning! I need a cup of joe",
+                R.raw.cupofjoe, R.raw.cupofjoeexample, R.raw.cupofjoemeaning));
 
 
-        arrayList.add(new the_words_class("Bite me!",
-                "لا أهتم بكلامك",
-                "A phrase that roughly means: I don't care! - used as response to an insult."
-                , "Person 1: I don't like the way you talk! Person 2: Yeah? Bite me!"
-                , R.raw.biteme, R.raw.bitemeexample, R.raw.bitememeaning));
+        arrayList.add(new the_words_class("An apple a day keeps the doctor away"
+                , "تفاحة يوميا تغنيك عن الطبيب",
+                "Apples are so nutritious that if you eat an apple every day , you will not ever need to go to a doctor"
+                , "Stay healthy.Eat lots of fruits.Remember an apple a day keeps the doctor away"
+                , R.raw.anapple, R.raw.anappleexample, R.raw.anapplemeaning));
 
 
-        arrayList.add(new the_words_class("Bring it on!",
-                "للبدء بمعركة او منافسة تقال كتحدي",
-                "To begin a fight or competition",
-                "Person 1: You wanna race ? \n Person 2: Bring it on. "
-                , R.raw.bringiton, R.raw.bitemeexample, R.raw.bringitonmeaning));
-
-
-        arrayList.add(new the_words_class("Count me in!", "ضمني في خطتك",
-                "Include me in your activity/plan",
-                "wait you're going to Disneyland? Count me in!",
-                R.raw.countmein, R.raw.countmeinexample, R.raw.countmeinmeaning));
+        arrayList.add(new the_words_class("In a nutshell",
+                "يعني ( بالمختصر ) الحديث بإجاز قدر الإمكان",
+                "something that you say when you are describing something using as few words as possible"
+                , "The answer,in a nutshell, is no.",
+                R.raw.inanutshell, R.raw.inanutshellexample, R.raw.inanutshellmeaning));
 
 
         arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, arrayList);
@@ -104,20 +97,23 @@ public class ExclamationCategoryFragmentOne extends AppCompatActivity {
                 bundle.putInt("EnglishAudio", englishAudio);
 
                 // send the bundles using intnent , use put extras .
-                Intent intent = new Intent(ExclamationCategoryFragmentOne.this, ExclamationHolder.class);
+                Intent intent = new Intent(AboutFoodCategoryFragmentOne.this, FoodHolder.class);
                 intent.putExtras(bundle);
                 startActivity(intent);
+                // Toast.makeText(AboutFoodCategoryFragmentOne.this, "clickme", Toast.LENGTH_LONG).show();
 
             }
         }); // end of  setOnItemClickListener
 
 
-        // add text changer listener ,the filter process take place here :
+        // add text changer listener \
+        // \\ the filter process take place here :
 
+        // giving the Search some features "
 
-        ExclamationFilter.setHint("Search");
-        ExclamationFilter.setCardViewElevation(10);
-        ExclamationFilter.addTextChangeListener(new TextWatcher() {
+        foodfilter.setHint("Search");
+        foodfilter.setCardViewElevation(10);
+        foodfilter.addTextChangeListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -127,7 +123,7 @@ public class ExclamationCategoryFragmentOne extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
                 // reference the context of this page
-                (ExclamationCategoryFragmentOne.this).arrayAdapter.getFilter().filter(s);
+                (AboutFoodCategoryFragmentOne.this).arrayAdapter.getFilter().filter(s);
 
             }
 

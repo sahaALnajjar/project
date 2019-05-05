@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#eeeeee"
 
-    tools:context="com.example.android.myproject.Spelling.SpellActivity">
+    tools:context="com.example.android.myproject.spelling.SpellActivity">
 
     <TextView
         android:id="@+id/score"

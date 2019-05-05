@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.android.myproject.Businness.BusinessHolder;
 import com.example.android.myproject.Models.SharedPrefs;
 import com.example.android.myproject.R;
 
