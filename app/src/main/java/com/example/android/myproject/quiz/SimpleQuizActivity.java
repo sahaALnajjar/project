@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.example.android.myproject.R;
 
+import java.text.MessageFormat;
 import java.util.Random;
 
 public class SimpleQuizActivity extends AppCompatActivity {
@@ -149,7 +150,7 @@ public class SimpleQuizActivity extends AppCompatActivity {
 
 
     private void updateScore(int point) {
-        score.setText("" + mScore);
+        score.setText(MessageFormat.format("{0}", mScore));
     }
 
     // this method is used to find and sent the correct answer .
@@ -206,11 +207,11 @@ public class SimpleQuizActivity extends AppCompatActivity {
     // start of a class question
     //  you can add questions using the class below .
 
-    public static class Questions {
+    private static class Questions {
 
         // now  i have to create 3 arrays one to hold the question , the second for the choices , the 3rd one is for the answers .
 
-        public String[] mQuestions = {
+        private String[] mQuestions = {
                 "Shhh! Please don't talk so loud; the baby _____  ",
                 "The train goes ____ many tunnels on the way to Rome",
                 "What is she doing? ",
@@ -244,26 +245,30 @@ public class SimpleQuizActivity extends AppCompatActivity {
 
 
         // this method is used to find the question
-        public String getQuestion(int i) {
-            String question = mQuestions[i];
+        private String getQuestion(int i) {
+            String question;
+            question = mQuestions[i];
             return question;
         }
 
         //this method is used to get the answer if it was at position "0" inside the array the_choices .
-        public String getChoice1(int i) {
-            String choice1 = mChoices[i][0];
+        private String getChoice1(int i) {
+            String choice1;
+            choice1 = mChoices[i][0];
             return choice1;
         }
 
         //this method is used to get the answer if it was at position "1" inside the array the_choices .
-        public String getChoice2(int i) {
-            String choice2 = mChoices[i][1];
+        private String getChoice2(int i) {
+            String choice2;
+            choice2 = mChoices[i][1];
             return choice2;
         }
 
         //this method is used to get the answer if it was at position "2" inside the array the_choices .
-        public String getChoice3(int i) {
-            String choice3 = mChoices[i][2];
+        private String getChoice3(int i) {
+            String choice3;
+            choice3 = mChoices[i][2];
             return choice3;
         }
 
@@ -275,8 +280,9 @@ public class SimpleQuizActivity extends AppCompatActivity {
 
 //this method is used to return the correct answer from the array "theCorrectAnswer"
 
-        public String getCorrectAnswer(int i) {
-            String answer = mCorrectAnswer[i];
+        private String getCorrectAnswer(int i) {
+            String answer;
+            answer = mCorrectAnswer[i];
             return answer;
         }
 

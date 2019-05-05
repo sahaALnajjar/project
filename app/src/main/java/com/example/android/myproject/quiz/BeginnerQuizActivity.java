@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.example.android.myproject.R;
 
+import java.text.MessageFormat;
 import java.util.Random;
 
 public class BeginnerQuizActivity extends AppCompatActivity {
@@ -153,7 +154,8 @@ public class BeginnerQuizActivity extends AppCompatActivity {
 
 
     private void updateScore(int point) {
-        score.setText("" + mScore);
+        score.setText(MessageFormat.format("{0}", mScore));
+       // score.setText("" + mScore);
     }
 
     // this method is used to find and sent the correct answer .
@@ -196,7 +198,8 @@ public class BeginnerQuizActivity extends AppCompatActivity {
 
     }
 
-    // this code allows the and setup the up navigation from activity to the fragment i came from
+    // this code allows the and setup the up navigation from activity to the
+    // fragment i came from
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -210,11 +213,11 @@ public class BeginnerQuizActivity extends AppCompatActivity {
     // start of a class question
     //  you can add questions using the class below .
 
-    public static class Questions_beginner {
+    private static class Questions_beginner {
 
         // now  i have to create 3 arrays one to hold the question , the second for the choices , the 3rd one is for the answers .
 
-        public String[] mQuestionsBeginner = {
+        private  String[] mQuestionsBeginner = {
                 "If you were depressed, why didn't you talk to ______?",
                 "Thomas isn't a good manager; he never plans ______ next week.",
                 "______ thinking about your brother?",
@@ -250,26 +253,30 @@ public class BeginnerQuizActivity extends AppCompatActivity {
 
 
         // this method is used to find the question
-        public String getQuestionBeginner(int i) {
-            String question = mQuestionsBeginner[i];
+       private String getQuestionBeginner(int i) {
+            String question;
+            question = mQuestionsBeginner[i];
             return question;
         }
 
         //this method is used to get the answer if it was at position "0" inside the array the_choices .
-        public String getChoice1Beginner(int i) {
-            String choice1 = mChoicesBeginner[i][0];
+       private String getChoice1Beginner(int i) {
+            String choice1;
+            choice1 = mChoicesBeginner[i][0];
             return choice1;
         }
 
         //this method is used to get the answer if it was at position "1" inside the array the_choices .
-        public String getChoice2Beginner(int i) {
-            String choice2 = mChoicesBeginner[i][1];
+        private String getChoice2Beginner(int i) {
+            String choice2;
+            choice2 = mChoicesBeginner[i][1];
             return choice2;
         }
 
         //this method is used to get the answer if it was at position "2" inside the array the_choices .
-        public String getChoice3Beginner(int i) {
-            String choice3 = mChoicesBeginner[i][2];
+       private String getChoice3Beginner(int i) {
+            String choice3;
+            choice3 = mChoicesBeginner[i][2];
             return choice3;
         }
 
@@ -281,8 +288,9 @@ public class BeginnerQuizActivity extends AppCompatActivity {
 
 //this method is used to return the correct answer from the array "theCorrectAnswer"
 
-        public String getCorrectAnswerBeginner(int i) {
-            String answer = mCorrectAnswerBeginner[i];
+        private String getCorrectAnswerBeginner(int i) {
+            String answer;
+            answer = mCorrectAnswerBeginner[i];
             return answer;
         }
 

@@ -29,9 +29,12 @@ public class VideoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_layout);
 
-        // this code   setDisplayHomeAsUpEnabled(true); will show  the back arrow in the action bar
-        // now you need to go to the manifest and new attribute android:parentActivityName=" the page we want to back to "
-
+        /*
+          this code   setDisplayHomeAsUpEnabled(true); will show  the back arrow in
+         the action bar
+         now you need to go to the manifest and new attribute
+         android:parentActivityName=" the page we want to back to "
+         */
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         videoView = findViewById(R.id.myVideoView);
@@ -59,14 +62,6 @@ public class VideoActivity extends AppCompatActivity {
                     case 0:
 
                         videoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video_one));
-
-//                        DisplayMetrics metrics = new DisplayMetrics();
-//                        getWindowManager().getDefaultDisplay().getMetrics(metrics);
-//                        android.widget.RelativeLayout.LayoutParams params = (android.widget.RelativeLayout.LayoutParams) videoView.getLayoutParams();
-//                        params.width = metrics.widthPixels;
-//                        params.height = metrics.heightPixels;
-//                        params.leftMargin = 0;
-//                        videoView.setLayoutParams(params);
 
                         // setting the video view to visible to display the requested video
                         videoView.setVisibility(View.VISIBLE);

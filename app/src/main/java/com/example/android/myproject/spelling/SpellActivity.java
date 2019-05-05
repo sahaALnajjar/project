@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.example.android.myproject.R;
 
+import java.text.MessageFormat;
 import java.util.Random;
 
 public class SpellActivity extends AppCompatActivity {
@@ -148,7 +149,9 @@ public class SpellActivity extends AppCompatActivity {
 
 
     private void updateScore(int point) {
-        score.setText("" + mScore);
+       // score.setText("" + mScore);
+        score.setText(MessageFormat.format("{0}", mScore));
+
     }
 
     // this method is used to find and sent the correct answer .
@@ -208,11 +211,11 @@ public class SpellActivity extends AppCompatActivity {
     // start of a class question
     //  you can add questions using the class below .
 
-    public static class Questions_Spelling {
+    private static class Questions_Spelling {
 
         // now  i have to create 3 arrays one to hold the question , the second for the choices , the 3rd one is for the answers .
 
-        public String[] mQuestionsSpelling = {
+        private String[] mQuestionsSpelling = {
                 "th_s",
                 "_ims",
                 "w_r_d",
@@ -248,39 +251,40 @@ public class SpellActivity extends AppCompatActivity {
 
 
         // this method is used to find the question
-        public String getQuestionSpelling(int i) {
-            String question = mQuestionsSpelling[i];
+        private String getQuestionSpelling(int i) {
+            String question;
+            question = mQuestionsSpelling[i];
             return question;
         }
 
         //this method is used to get the answer if it was at position "0" inside the array the_choices .
-        public String getChoice1Spelling(int i) {
-            String choice1 = mChoicesSpelling[i][0];
+        private String getChoice1Spelling(int i) {
+            String choice1;
+            choice1 = mChoicesSpelling[i][0];
             return choice1;
         }
 
         //this method is used to get the answer if it was at position "1" inside the array the_choices .
-        public String getChoice2Spelling(int i) {
-            String choice2 = mChoicesSpelling[i][1];
+        private String getChoice2Spelling(int i) {
+            String choice2;
+            choice2 = mChoicesSpelling[i][1];
             return choice2;
         }
 
         //this method is used to get the answer if it was at position "2" inside the array the_choices .
-        public String getChoice3Spelling(int i) {
-            String choice3 = mChoicesSpelling[i][2];
+        private String getChoice3Spelling(int i) {
+            String choice3;
+            choice3 = mChoicesSpelling[i][2];
             return choice3;
         }
 
-//        //this method is used to get the answer if it was at position "3" inside the array the_choices .
-//        public String getChoice4 (int i){
-//            String choice4 = mChoices[i][3];
-//            return choice4;
-//        }
+
 
 //this method is used to return the correct answer from the array "theCorrectAnswer"
 
-        public String getCorrectAnswerBeginner(int i) {
-            String answer = mCorrectAnswerSpelling[i];
+        private String getCorrectAnswerBeginner(int i) {
+            String answer;
+            answer = mCorrectAnswerSpelling[i];
             return answer;
         }
 
