@@ -71,7 +71,7 @@ public class EmailActivity extends AppCompatActivity {
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
         emailIntent.setData(Uri.parse("mailto:"));
         emailIntent.setType("message/rfc822");
-        emailIntent.putExtra(Intent.EXTRA_EMAIL, to); // works as expected
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, to); // recipient email addresses
         emailIntent.putExtra(Intent.EXTRA_CC, theSenderEmail); // not sure about this one
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);// working as expected
         emailIntent.putExtra(Intent.EXTRA_TEXT, theMessage);// working as expected

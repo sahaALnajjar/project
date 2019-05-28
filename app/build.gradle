@@ -46,8 +46,8 @@ dependencies {
    // implementation 'com.github.bumptech.glide:glide:4.6.1'
 
     // for the search bar
-    compile 'com.github.mancj:MaterialSearchBar:0.7.1'
+    implementation  'com.github.mancj:MaterialSearchBar:0.7.1'
 
     // for the splash screen :
-    compile 'gr.pantrif:easy-android-splash-screen:0.0.1'
+    implementation  'gr.pantrif:easy-android-splash-screen:0.0.1'
 }

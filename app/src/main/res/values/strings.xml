@@ -32,5 +32,6 @@
     <string name="example">Example</string>
     <string name="ExampleEnglish">المثال بالانجليزي</string>
     <string name="todo">TODO</string>
+    <string name="for_a_future_work">for a future work</string>
 
 </resources>
