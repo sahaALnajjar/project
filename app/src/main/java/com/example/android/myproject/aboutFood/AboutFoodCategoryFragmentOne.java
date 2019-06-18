@@ -13,6 +13,7 @@ import android.widget.ListView;
 
 import com.example.android.myproject.Models.the_words_class;
 import com.example.android.myproject.R;
+import com.example.android.myproject.detailsHolder;
 import com.mancj.materialsearchbar.MaterialSearchBar;
 
 import java.util.ArrayList;
@@ -97,7 +98,7 @@ public class AboutFoodCategoryFragmentOne extends AppCompatActivity {
                 bundle.putInt("EnglishAudio", englishAudio);
 
                 // send the bundles using intnent , use put extras .
-                Intent intent = new Intent(AboutFoodCategoryFragmentOne.this, FoodHolder.class);
+                Intent intent = new Intent(AboutFoodCategoryFragmentOne.this, detailsHolder.class);
                 intent.putExtras(bundle);
                 startActivity(intent);
                 // Toast.makeText(AboutFoodCategoryFragmentOne.this, "clickme", Toast.LENGTH_LONG).show();

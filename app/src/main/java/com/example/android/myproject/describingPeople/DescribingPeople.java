@@ -1,8 +1,8 @@
 package com.example.android.myproject.describingPeople;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.MenuItem;
@@ -11,8 +11,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.android.myproject.R;
 import com.example.android.myproject.Models.the_words_class;
+import com.example.android.myproject.R;
+import com.example.android.myproject.detailsHolder;
 import com.mancj.materialsearchbar.MaterialSearchBar;
 
 import java.util.ArrayList;
@@ -88,29 +89,30 @@ public class DescribingPeople extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 the_words_class tem = arrayListFamily.get(position);
-                //  also make sure to add it here .
-                String theWordfamily = tem.getThe_word_text();
-                String arabicWordfamily = tem.getThe_word_in_arabic();
-                String englishwordfamily = tem.getThe_text_in_english();
-                String exampleEnglishfamily = tem.getThe_example_english();
-                int audiofamily = tem.getmAudioId();
+                // also make sure to add it here .
+                // add the data from the list to the String and send the String using bundle .
+                String theWord = tem.getThe_word_text();
+                String arabicWord = tem.getThe_word_in_arabic();
+                String englishword = tem.getThe_text_in_english();
+                String exampleEnglish = tem.getThe_example_english();
+                int audio = tem.getmAudioId();
                 int exampleAudio = tem.getExampleAudio();
                 int englishAudio = tem.getEnglishAudio();
 
                 // will use this to send the data to the MistakesHolder.
-                Bundle bundleFamily = new Bundle();
-                bundleFamily.putString("TheWordFamily", theWordfamily);
-                bundleFamily.putString("TheWordArabicFamily", arabicWordfamily);
-                bundleFamily.putString("TheWordEnglishFamily", englishwordfamily);
-                bundleFamily.putString("theExampleFamily", exampleEnglishfamily);
-                bundleFamily.putInt("voiceFamily", audiofamily);
-                bundleFamily.putInt("ExampleAudio", exampleAudio);
-                bundleFamily.putInt("EnglishAudio", englishAudio);
+                Bundle bundle = new Bundle();
+                bundle.putString("TheWord", theWord);
+                bundle.putString("TheWordArabic", arabicWord);
+                bundle.putString("TheWordEnglish", englishword);
+                bundle.putString("theExample", exampleEnglish);
+                bundle.putInt("voice", audio);
+                bundle.putInt("ExampleAudio", exampleAudio);
+                bundle.putInt("EnglishAudio", englishAudio);
 
                 // send the bundles using intnent , use put extras .
 
-                Intent intentFamily = new Intent(DescribingPeople.this, PeopleHolder.class);
-                intentFamily.putExtras(bundleFamily);
+                Intent intentFamily = new Intent(DescribingPeople.this, detailsHolder.class);
+                intentFamily.putExtras(bundle);
                 startActivity(intentFamily);
 
 //                String complete = theWord + "\n" + arabicWord +"\n" + englishword +"\n" + exampleEnglish ;

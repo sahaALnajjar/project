@@ -1,9 +1,10 @@
-package com.example.android.myproject.aboutFood;
+package com.example.android.myproject;
 
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -11,9 +12,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android.myproject.Models.SharedPrefs;
-import com.example.android.myproject.R;
 
-public class FoodHolder extends AppCompatActivity {
+public class detailsHolder extends AppCompatActivity {
 
 
     private TextView the_word_textView;
@@ -23,12 +23,13 @@ public class FoodHolder extends AppCompatActivity {
     private ImageView bookmark;
     private ImageView addToFavorite;
     private ImageView playSound;
-
     private ImageView playsoundEnglish;
     private ImageView playsoundExample;
 
     private MediaPlayer mediaPlayer;
+
     private AudioManager mAudioManager;
+
     private MediaPlayer.OnCompletionListener mCompletionListener = new MediaPlayer.OnCompletionListener() {
         public void onCompletion(MediaPlayer mp) {
             releaseMediaPlayer();
@@ -71,11 +72,12 @@ public class FoodHolder extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.words_main_holder);
-        //  setContentView(R.layout.activity_food_holder);
+        // setContentView(R.layout.activity_abbreviations_holder);
 
         // this code   setDisplayHomeAsUpEnabled(true); will show  the back arrow in the action bar
         // now you need to go to the manifest and new attribute android:parentActivityName=" the page we want to back to "
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         mAudioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
         the_word_textView = (TextView) findViewById(R.id.the_word_textview);
@@ -111,6 +113,10 @@ public class FoodHolder extends AppCompatActivity {
         playSound.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Log.i("Demo", "the word sound is working");
+
+
                 // Release the media player if it currently exists because we are about to
                 // play a different sound file
                 releaseMediaPlayer();
@@ -124,7 +130,7 @@ public class FoodHolder extends AppCompatActivity {
                     // We have audio focus now.
                     // Create and setup the {@link MediaPlayer} for the audio resource associated
                     // with the current word
-                    mediaPlayer = MediaPlayer.create(FoodHolder.this, audio);
+                    mediaPlayer = MediaPlayer.create(detailsHolder.this, audio);
                     // Start the audio file
                     mediaPlayer.start();
                     // Setup a listener on the media player, so that we can stop and release the
@@ -140,9 +146,14 @@ public class FoodHolder extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                Log.i("Example", "the word sound is working");
+
+
                 // Release the media player if it currently exists because we are about to
                 // play a different sound file
+
                 releaseMediaPlayer();
+
                 // Get the {@link Word} object at the given position the user clicked on
 
                 // Request audio focus so in order to play the audio file. The app needs to play a
@@ -156,9 +167,11 @@ public class FoodHolder extends AppCompatActivity {
 
                     // Create and setup the {@link MediaPlayer} for the audio resource associated
                     // with the current word
-                    mediaPlayer = MediaPlayer.create(FoodHolder.this, exampleAudio);
+                    mediaPlayer = MediaPlayer.create(detailsHolder.this, exampleAudio);
+
                     // Start the audio file
                     mediaPlayer.start();
+
                     // Setup a listener on the media player, so that we can stop and release the
                     // media player once the sound has finished playing.
                     mediaPlayer.setOnCompletionListener(mCompletionListener);
@@ -173,6 +186,10 @@ public class FoodHolder extends AppCompatActivity {
             public void onClick(View v) {
                 // Release the media player if it currently exists because we are about to
                 // play a different sound file
+
+                Log.i("english", "the word sound is working");
+
+
                 releaseMediaPlayer();
                 // Get the {@link Word} object at the given position the user clicked on
 
@@ -187,7 +204,7 @@ public class FoodHolder extends AppCompatActivity {
 
                     // Create and setup the {@link MediaPlayer} for the audio resource associated
                     // with the current word
-                    mediaPlayer = MediaPlayer.create(FoodHolder.this, englishAudio);
+                    mediaPlayer = MediaPlayer.create(detailsHolder.this, englishAudio);
 
                     // Start the audio file
                     mediaPlayer.start();
@@ -199,7 +216,7 @@ public class FoodHolder extends AppCompatActivity {
             }
         });
 
-        //   fix me yo !
+        //    fix me yo !
         // this code is going to help me check and uncheck just like the function of the like button on facebook
         // anyway i need to find a way to save this change once i leave this page .
 
@@ -210,7 +227,7 @@ public class FoodHolder extends AppCompatActivity {
             private boolean bookmarking = true;
 
             public void onClick(View v) {
-                SharedPrefs prefs = new SharedPrefs(FoodHolder.this);
+                SharedPrefs prefs = new SharedPrefs(detailsHolder.this);
                 if (bookmarking) {
                     bookmark.setImageResource(R.drawable.ic_bookmarked_blue);
                     bookmarking = false;
@@ -230,7 +247,7 @@ public class FoodHolder extends AppCompatActivity {
         // this code is going to help me check and uncheck just like the function of the like button on facebook
         // anyway i need to find a way to save this change once i leave this page .
         //  find a way to get shared preference works here .
-        //try to add the text of the word to a string variable and sent it through a bundle to
+        // try to add the text of the word to a string variable and sent it through a bundle to
         //  the favorite activity then try to add it to the array list you have .
 
         addToFavorite.setOnClickListener(new View.OnClickListener() {

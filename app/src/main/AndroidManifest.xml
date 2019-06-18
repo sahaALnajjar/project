@@ -73,35 +73,14 @@
             android:name=".quiz.SimpleQuizActivity"
             android:label="Simple quiz" />
         <activity
-            android:name=".expressingMistakes.MistakesHolder"
-            android:label="Expressing Mistakes" />
-        <activity
-            android:name=".describingPeople.PeopleHolder"
-            android:label="Describing People" />
-        <activity
             android:name=".reading.readingHolder"
             android:label="Reading" />
         <activity
             android:name=".grammar.grammarHolder"
             android:label="Grammar" />
         <activity
-            android:name=".phrasesAnimals.animalHolder"
-            android:label="Phrases involving animals" />
-        <activity
-            android:name=".abbreviations.AbbreviationsHolder"
-            android:label="Abbreviations" />
-        <activity
-            android:name=".aboutFood.FoodHolder"
-            android:label="Phrases About Food" />
-        <activity
-            android:name=".business.BusinessHolder"
-            android:label="Business" />
-        <activity
-            android:name=".proverbs.proverbsHolder"
-            android:label="Proverbs" />
-        <activity
-            android:name=".exclamation.ExclamationHolder"
-            android:label="Exclamation" />
+            android:name=".detailsHolder"
+            android:label="Details" />
         <activity android:name=".MainActivity">
 
             <intent-filter>

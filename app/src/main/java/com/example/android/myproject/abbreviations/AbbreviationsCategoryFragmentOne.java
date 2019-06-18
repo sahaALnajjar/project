@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.android.myproject.detailsHolder;
 import com.example.android.myproject.Models.the_words_class;
 import com.example.android.myproject.R;
 import com.mancj.materialsearchbar.MaterialSearchBar;
@@ -92,7 +93,7 @@ public class AbbreviationsCategoryFragmentOne extends AppCompatActivity {
                 bundle.putInt("EnglishAudio", englishAudio);
 
                 // send the bundles using intnent , use put extras .
-                Intent intent = new Intent(AbbreviationsCategoryFragmentOne.this, AbbreviationsHolder.class);
+                Intent intent = new Intent(AbbreviationsCategoryFragmentOne.this, detailsHolder.class);
                 intent.putExtras(bundle);
                 startActivity(intent);
 

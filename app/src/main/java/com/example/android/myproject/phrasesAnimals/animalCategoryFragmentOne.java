@@ -13,6 +13,8 @@ import android.widget.ListView;
 
 import com.example.android.myproject.R;
 import com.example.android.myproject.Models.the_words_class;
+import com.example.android.myproject.describingPeople.DescribingPeople;
+import com.example.android.myproject.detailsHolder;
 import com.mancj.materialsearchbar.MaterialSearchBar;
 
 import java.util.ArrayList;
@@ -90,29 +92,30 @@ public class animalCategoryFragmentOne extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 the_words_class tem = arrayListAnimal.get(position);
-                //  also make sure to add it here .
-                String theWordAnimal = tem.getThe_word_text();
-                String arabicWordAnimal = tem.getThe_word_in_arabic();
-                String englishwordAnimal = tem.getThe_text_in_english();
-                String exampleEnglishAnimal = tem.getThe_example_english();
-                int audioAnimal = tem.getmAudioId();
+                // also make sure to add it here .
+                // add the data from the list to the String and send the String using bundle .
+                String theWord = tem.getThe_word_text();
+                String arabicWord = tem.getThe_word_in_arabic();
+                String englishword = tem.getThe_text_in_english();
+                String exampleEnglish = tem.getThe_example_english();
+                int audio = tem.getmAudioId();
                 int exampleAudio = tem.getExampleAudio();
                 int englishAudio = tem.getEnglishAudio();
 
                 // will use this to send the data to the MistakesHolder.
-                Bundle bundleFamily = new Bundle();
-                bundleFamily.putString("theWordAnimal", theWordAnimal);
-                bundleFamily.putString("arabicWordAnimal", arabicWordAnimal);
-                bundleFamily.putString("englishwordAnimal", englishwordAnimal);
-                bundleFamily.putString("exampleEnglishAnimal", exampleEnglishAnimal);
-                bundleFamily.putInt("audioAnimal", audioAnimal);
-                bundleFamily.putInt("ExampleAudio", exampleAudio);
-                bundleFamily.putInt("EnglishAudio", englishAudio);
+                Bundle bundle = new Bundle();
+                bundle.putString("TheWord", theWord);
+                bundle.putString("TheWordArabic", arabicWord);
+                bundle.putString("TheWordEnglish", englishword);
+                bundle.putString("theExample", exampleEnglish);
+                bundle.putInt("voice", audio);
+                bundle.putInt("ExampleAudio", exampleAudio);
+                bundle.putInt("EnglishAudio", englishAudio);
 
                 // send the bundles using intnent , use put extras .
 
-                Intent intentFamily = new Intent(animalCategoryFragmentOne.this, animalHolder.class);
-                intentFamily.putExtras(bundleFamily);
+                Intent intentFamily = new Intent(animalCategoryFragmentOne.this, detailsHolder.class);
+                intentFamily.putExtras(bundle);
                 startActivity(intentFamily);
 
 //                String complete = theWord + "\n" + arabicWord +"\n" + englishword +"\n" + exampleEnglish ;
