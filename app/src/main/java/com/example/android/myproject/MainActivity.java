@@ -25,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
         if (viewPager != null) {
             setupViewPager(viewPager);
+
+            viewPager.setPageTransformer(true , new DepthPageTransformer());
+            viewPager.setPageTransformer(true , new ZoomOutPageTransformer());
         }
         // Create an adapter that knows which fragment should be shown on each page
         //  myViewPagerAdapter adapter = new myViewPagerAdapter(getSupportFragmentManager());
@@ -36,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.getTabAt(0).setIcon(R.drawable.ic_house);
         tabLayout.getTabAt(1).setIcon(R.drawable.ic_search_engine);
         tabLayout.getTabAt(2).setIcon(R.drawable.ic_menu_button_of_three_horizontal_lines);
+
+
     } // end of onCreate method
 
     //  this method will add my fragments to the viewPager so i can see them on the screen
